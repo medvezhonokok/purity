@@ -6,7 +6,7 @@ const Cases = () =>
     (
         <div id='cases' className='cases-container'>
                 <div className='us-container-header'>
-                    <img src={dot} alt={'us-dot'}/> Кто мы?
+                    <img src={dot} alt={'us-dot'}/> Наши кейсы
                 </div>
             <div className='cases-container-column'>
                 <div className='cases-container-row'>

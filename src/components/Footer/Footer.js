@@ -49,14 +49,14 @@ const Footer = () =>
                         Контакты
                     </button>
                 </div>
-                <div className='footer-media' style={{color: "white"}}>
+                <div className='footer-media' style={{color: "white", fontWeight: '400', paddingLeft: "5rem", marginRight: "3rem"}}>
                     СОЦ СЕТИ
                 </div>
             </div>
             <footer style={{
                 color: "white",
                 textAlign: "right",
-                marginRight: "10rem"
+                marginRight: "10rem",
             }}>
                 &copy; PURITYFLOW 2025
             </footer>

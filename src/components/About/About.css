@@ -1,8 +1,26 @@
 .about-article {
-    width: 75%;
+    display: flex;
+    justify-content: center;
     font-size: 70px;
-    margin-top: 5rem;
-    margin-left: 22rem;
+    margin: 5rem auto 0 auto;
+}
+
+.about-container {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.about-line {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.about-left {
+    text-align: left;
+}
+
+.about-right {
+    text-align: right;
 }
 
 #about {

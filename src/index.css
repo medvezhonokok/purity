@@ -3,7 +3,7 @@ body {
     vertical-align: middle;
     margin: 0;
     font-weight: 700;
-    line-height: 80px;
+    line-height: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: url("./assets/background.svg") !important;

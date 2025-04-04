@@ -5,11 +5,20 @@
 
 .footer {
     justify-content: space-between;
-    width: 80%;
-    border-top: 0.1rem solid white;
-    margin: 0 auto;
+    margin: 10rem auto 5rem auto;
     display: flex;
+    padding: 5rem 15%;
     flex-direction: row;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: 0.1rem;
+    background: white;
 }
 
 .footer-buttons {
@@ -21,6 +30,7 @@
 }
 
 .footer-buttons button {
+    text-align: left    ;
     background: none;
     cursor: pointer;
     color: white;
