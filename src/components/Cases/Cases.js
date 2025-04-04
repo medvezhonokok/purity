@@ -10,7 +10,7 @@ const Cases = ({isMobile}) =>
                 <div className='us-container-header'>
                     <img src={dot} alt={'us-dot'}/> Наши кейсы
                 </div>
-                <div className='cases-container-column'>
+                <div className={!isMobile && 'cases-container-column'}>
                     <div className='cases-container-row'>
                         CRM
                         <br/>для магазина
@@ -25,7 +25,7 @@ const Cases = ({isMobile}) =>
                         BPM-система для<br/>ресторана
                     </div>
                 </div>
-                <div className='cases-container-column'>
+                <div className={!isMobile && 'cases-container-column'}>
                     <div className='cases-container-row'>
                         Разработали и внедрили CRM-систему для учета заказов и клиентов, заменившую ручной учет и
                         повысившую

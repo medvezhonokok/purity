@@ -42,17 +42,22 @@
 }
 
 .sent-request-menu-button {
-    background: #1611E7;
-    cursor: pointer;
-    color: white;
+    font-size: 18px;
+    background: #1611e7;
     border: none;
-    width: 10rem;
     border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
     padding: 0 15px;
+    width: 11rem;
 }
 
 .sent-request-menu-button:hover {
     background: #1712d6;
+}
+
+.menu-button {
+    font-size: 18px;
 }
 
 .menu-mobile {
