@@ -20,7 +20,6 @@
     font-size: 36px;
     line-height: normal;
     font-weight: 500;
-    min-height: 100%;
 }
 
 .cases-container-column:first-child {
@@ -42,7 +41,7 @@
 
 .cases-container-row-mobile {
     margin: 2rem 0;
-    font-size: 28px !important;;
+    font-size: 28px !important;
     padding: 10px 0;
 }
 
