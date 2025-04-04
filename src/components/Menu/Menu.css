@@ -1,0 +1,50 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin: 1rem auto 0 auto;
+    background: white;
+    height: 3rem;
+    padding: 10px 70px;
+    border-radius: 1rem;
+}
+
+.menu-buttons {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.menu-buttons button {
+    background: none;
+    border: none;
+}
+
+.menu-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.menu-buttons button:active,
+.menu-buttons button:focus {
+    color: #1611E7;
+    outline: none;
+}
+
+.sent-request-menu-button {
+    background: #1611E7;
+    cursor: pointer;
+    color: white;
+    border: none;
+    width: 10rem;
+    border-radius: 2rem;
+    padding: 0 15px;
+}
+
+.sent-request-menu-button:hover {
+    background: #1712d6;
+}

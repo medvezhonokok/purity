@@ -1,0 +1,42 @@
+.cases-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    width: 70%;
+    margin: 10rem auto 0 auto;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.cases-container-column {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.cases-container-row {
+    padding: 15px;
+    border: none;
+    font-size: 36px;
+    line-height: normal;
+    font-weight: 500;
+    min-height: 100%;
+}
+
+.cases-container-column:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    align-self: center;
+}
+
+.cases-container-column:nth-child(2) .cases-container-row {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.cases-container-column:last-child .cases-container-row {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}

@@ -1,0 +1,26 @@
+.us-container {
+    width: 70%;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.us-container-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -1rem;
+}
+
+.us-container-quote {
+    font-size: 36px;
+    display: flex;
+}
+
+.us-container-about {
+    font-weight: 400;
+    position: relative;
+    float: right;
+    margin-right: 15rem;
+    width: 35%;
+    line-height: normal;
+}

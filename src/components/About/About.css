@@ -1,0 +1,10 @@
+.about-article {
+    width: 75%;
+    font-size: 70px;
+    margin-top: 5rem;
+    margin-left: 22rem;
+}
+
+#about {
+    scroll-margin-top: 5rem;
+}
