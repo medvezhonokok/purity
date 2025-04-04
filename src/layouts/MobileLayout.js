@@ -8,14 +8,16 @@ import Footer from "../components/Footer/Footer";
 
 const MobileLayout = () => {
     return (
-        <>
+        <div style={{
+            overflowX: 'hidden'
+        }}>
             <Menu isMobile={true}/>
-            <About/>
-            <Us/>
-            <Specialization/>
-            <Cases/>
-            <Footer/>
-        </>
+            <About isMobile={true}/>
+            <Us isMobile={true}/>
+            <Specialization isMobile={true}/>
+            <Cases isMobile={true}/>
+            <Footer isMobile={true}/>
+        </div>
     );
 };
 

@@ -26,3 +26,8 @@
 #about {
     scroll-margin-top: 5rem;
 }
+
+.mobile-about {
+    width: 95%;
+    font-size: 42px;
+}

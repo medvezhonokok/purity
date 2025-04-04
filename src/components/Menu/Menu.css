@@ -17,6 +17,12 @@
     justify-content: center;
 }
 
+.menu-mobile-buttons button {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 2rem;
+}
+
 .menu-buttons button {
     background: none;
     border: none;
@@ -47,4 +53,43 @@
 
 .sent-request-menu-button:hover {
     background: #1712d6;
+}
+
+.menu-mobile {
+    padding: 10px;
+    background: white;
+    border-radius: 1rem;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem auto;
+    font-size: 18px;
+}
+
+.menu-mobile-buttons {
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.menu-mobile-header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.mobile-button {
+    font-size: 18px;
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+}
+
+.menu-contacts-mobile {
+    height: 50vh;
+    margin: 5rem 0;
+    width: 80%;
+}
+
+.menu-contacts-mobile div {
+    font-size: 16px;
 }

@@ -3,16 +3,16 @@ import './Form.css';
 import dot from "../../assets/whiteDot.svg";
 import {TextField} from "@mui/material";
 
-const Form = () => {
+const Form = ({isMobile}) => {
     const [termsAccepted, setTermsAccepted] = React.useState(false);
 
     return (
-        <div id='form' className='form-container'>
-            <div className='us-container-header' style={{color: "white", width: "30%"}}>
+        <div id='form' className={'form-container ' + (isMobile && 'form-container-mobile')}>
+            <div className='us-container-header' style={!isMobile ? {color: "white", width: "30%"} : {color: "white", width: "50%", marginTop: '2rem'}}>
                 <img src={dot} alt={'us-dot'}/> Форма заявки
             </div>
             <div className='form-container-body'>
-                <div className='form-header'>
+                <div className='form-header' style={isMobile && {fontSize: "32px"}}>
                     Расскажите нам о <span style={{
                     background: "white",
                     color: "black",

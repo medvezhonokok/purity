@@ -3,9 +3,10 @@ import dot from "../../assets/dot.svg";
 import programming from "../../assets/programming.svg";
 import './Specialization.css';
 
-const Specialization = () => {
+const Specialization = ({isMobile}) => {
     return (
-        <div id='specialization' className='specialization-container'>
+        <div id='specialization'
+             className={isMobile ? 'specialization-container-mobile' : 'specialization-container'}>
             <div className='us-container-header'>
                 <img src={dot} alt={'us-dot'}/> На чем специализируемся?
             </div>
@@ -80,8 +81,10 @@ const Specialization = () => {
                     автоматизировать аналитику, общение и бизнес-процессы.
                 </div>
             </div>
-            <div className='specialization-container-box empty-box'>
-            </div>
+            {!isMobile &&
+                <div className='specialization-container-box empty-box'>
+                </div>
+            }
             <div className='specialization-container-box'>
                 <div className='specialization-container-box-header'>
                     (06)

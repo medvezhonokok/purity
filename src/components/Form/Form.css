@@ -8,6 +8,13 @@
     font-weight: 500;
 }
 
+.form-container-mobile {
+    flex-direction: column;
+    margin: 0 1rem;
+    padding: 0;
+    gap: 3rem;
+}
+
 .form-header {
     line-height: normal;
     margin-bottom: 4rem;

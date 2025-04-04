@@ -32,3 +32,14 @@
     flex-direction: row;
     gap: 3rem;
 }
+
+.us-container-mobile {
+    margin: 3rem 1rem;
+}
+
+.us-container-body-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 1rem;
+}
