@@ -6,12 +6,13 @@ import Specialization from "../components/Specialization/Specialization";
 import Cases from "../components/Cases/Cases";
 import Footer from "../components/Footer/Footer";
 
-const MobileLayout = () => {
+const MobileLayout = ({showMenu}) => {
     return (
         <div style={{
-            overflowX: 'hidden'
+            overflowX: 'hidden',
+            paddingTop: '80px'
         }}>
-            <Menu isMobile={true}/>
+            <Menu show={showMenu} isMobile={true}/>
             <About isMobile={true}/>
             <Us isMobile={true}/>
             <Specialization isMobile={true}/>

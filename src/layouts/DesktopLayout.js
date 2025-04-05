@@ -9,7 +9,7 @@ import Footer from "../components/Footer/Footer";
 const DesktopLayout = () => {
     return (
         <>
-            <Menu isMobile={false}/>
+            <Menu show={true} isMobile={false}/>
             <About/>
             <Us/>
             <Specialization/>
