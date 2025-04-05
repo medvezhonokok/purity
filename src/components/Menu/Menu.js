@@ -27,7 +27,8 @@ const Menu = ({isMobile, show}) => {
                     onClick={() => setShowFullMenu(false)}
                 />
             )}
-            <div className={isMobile ? `menu-mobile ${showFullMenu ? 'fullscreen' : ''} ${show ? '' : 'hidden'}` : 'menu'}>
+            <div
+                className={isMobile && (`menu-mobile ${showFullMenu ? 'fullscreen' : ''} ${show ? '' : 'hidden'}`)}>
                 {!showFullMenu
                     ?
                     <div className={!isMobile ? 'menu' : 'menu-mobile'}>
