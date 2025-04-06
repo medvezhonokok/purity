@@ -2,9 +2,11 @@ import React from 'react';
 import './Form.css';
 import dot from "../../assets/whiteDot.svg";
 import {TextField} from "@mui/material";
+import { useForm, ValidationError } from '@formspree/react';
 
 const Form = ({isMobile}) => {
     const [termsAccepted, setTermsAccepted] = React.useState(false);
+    const [state, handleSubmit] = useForm("xgvapvwl");
 
     return (
         <div id='form' className={'form-container ' + (isMobile && 'form-container-mobile')}>
@@ -24,10 +26,25 @@ const Form = ({isMobile}) => {
                 }}>мы поможем</span> её реализовать!
                 </div>
 
-                <form className='form-container-body-input'>
-                    <TextField label="Имя" variant="standard" required={true}/>
-                    <TextField label="Телефон" variant="standard" required={true}/>
-                    <TextField label="Email" variant="standard" required={true}/>
+                <form className='form-container-body-input' onSubmit={handleSubmit}>
+                    <TextField label="Имя" name={"name"} variant="standard" required={true}/>
+                    <ValidationError
+                        prefix="Name"
+                        field="name"
+                        errors={state.errors}
+                    />
+                    <TextField label="Телефон" name={"phone"} variant="standard" required={true}/>
+                    <ValidationError
+                        prefix="Phone"
+                        field="phone"
+                        errors={state.errors}
+                    />
+                    <TextField label="Email" name={"email"} variant="standard" required={true}/>
+                    <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                    />
                     <label>
                         <input className='custom-checkbox'
                                onChange={() => setTermsAccepted(!termsAccepted)}
@@ -37,7 +54,7 @@ const Form = ({isMobile}) => {
                         данных</a>
                     </label>
 
-                    <button className={`sent-form-button `} type="submit">
+                    <button className={`sent-form-button `} disabled={state.submitting} type="submit">
                         Оставить заявку
                     </button>
                 </form>

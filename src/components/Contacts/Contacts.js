@@ -9,7 +9,7 @@ const Contacts = ({isMobile}) => {
                 <img src={dot} alt={'us-dot'}/> Контакты
             </div>
             <div style={isMobile && {fontSize: "24px"}}>
-                +7 (777) 777-77-77
+                +7 (965) 012 4842
             </div>
             <div style={isMobile && {fontSize: "24px"}}>
                 info@purity-flow.ru
