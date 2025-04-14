@@ -1,18 +1,17 @@
 .contacts-container {
-    margin-top: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 15%;
+    margin: 7rem auto 0 auto;
     color: white;
 }
 
 .contacts-container-mobile {
-    gap: 4rem;
+    gap: 72px;
     flex-direction: column;
     color: white;
     display: flex;
     justify-content: space-between;
-    margin: 10rem 1rem 0 1rem;
+    margin: 5rem auto 0 auto;
     font-size: 18px;
 }

@@ -3,22 +3,24 @@ import './Footer.css';
 import Form from "../Form/Form";
 import logo from './../../assets/whiteLogo.svg';
 import Contacts from "../Contacts/Contacts";
+import useContentWidth from "../../hooks/useContentWidth";
 
-const Footer = ({isMobile}) =>
-    (
+const Footer = ({isMobile}) => {
+    const width = useContentWidth();
+
+    return (
         <div className={'footer-container '}>
             <Form isMobile={isMobile}/>
             <Contacts isMobile={isMobile}/>
-            <div className='footer' style={isMobile && {
+            <div className='footer' style={isMobile ? {
                 flexDirection: "column",
-                borderTop: "2px solid white",
                 justifyContent: "space-between",
-                margin: "5rem 1rem",
+                margin: "5rem auto",
                 display: "flex",
-                padding: "2rem 0",
-                position: 'static'
-            }}>
-                <img src={logo} alt={'white-logo'}/>
+                position: 'static',
+                width
+            } : {width}}>
+                <img style={{}} src={logo} alt={'white-logo'}/>
                 <div className='footer-buttons' style={isMobile && {
                     width: "fit-content",
                     marginTop: "2rem",
@@ -66,30 +68,32 @@ const Footer = ({isMobile}) =>
                         Контакты
                     </button>
                 </div>
-                <div className='footer-media'
-                     style={!isMobile
-                         ? {color: "white", fontWeight: '400', paddingLeft: "5rem", marginRight: "3rem"}
-                         : {color: "white", fontWeight: '400', textAlign: "left", paddingLeft: '6px', marginTop: "3rem"}
-                     }>
-                    СОЦ СЕТИ
-                </div>
+                {/*<div className='footer-media'*/}
+                {/*     style={!isMobile*/}
+                {/*         ? {color: "white", fontWeight: '400', paddingLeft: "5rem", marginRight: "3rem"}*/}
+                {/*         : {color: "white", fontWeight: '400', textAlign: "left", paddingLeft: '6px', marginTop: "3rem"}*/}
+                {/*     }>*/}
+                {/*    СОЦ СЕТИ*/}
+                {/*</div>*/}
             </div>
             <footer style={!isMobile
                 ? {
                     color: "white",
                     textAlign: "right",
-                    marginRight: "10rem",
+                    margin: "0 auto",
+                    width
                 }
                 : {
                     color: "white",
                     textAlign: "right",
-                    marginRight: "2rem",
-                    paddingBottom: "2rem",
+                    margin: "0 auto",
+                    width
                 }
             }>
                 &copy; PURITYFLOW 2025
             </footer>
         </div>
-    );
+    )
+}
 
 export default Footer;

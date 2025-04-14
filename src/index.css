@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 body {
     font-family: Raleway, sans-serif;
     vertical-align: middle;
@@ -6,11 +10,28 @@ body {
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url("./assets/background.svg") !important;
-    background-repeat: no-repeat;
-    background-position: left 27% !important;
     background: #FAFAFA;
+    box-sizing: border-box;
+    padding: 30px 0 0 ;
+    overflow-x: hidden!important;
 }
+
+#root::before {
+    content: " ";
+    z-index: -1;
+    background: url("./assets/back.png") 0 0 repeat;
+    height: 990px;
+    position: fixed;
+    top: -10%;
+    left: calc(66% - 750px);
+    /*top: -20%;*/
+    transform-origin: center center;
+    transform: scale(-1, 1) rotate(-14deg) ;
+    opacity: 0.3;
+    object-fit: cover;
+    aspect-ratio: 1759.83/989.91;
+}
+
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

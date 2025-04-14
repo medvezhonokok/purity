@@ -1,0 +1,37 @@
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-start infinite;
+}
+
+
+.typing-text{
+    color:  #040404;
+    font-size: 36px;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    line-height: 47px;
+    word-wrap: break-word
+}
+
+.typing-container{
+    margin: 100px auto 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    .typing-text{
+        font-size: 26px;
+        font-weight: 500;
+        font-family: Raleway, sans-serif;
+        line-height: 34px;
+        word-wrap: break-word
+    }
+}

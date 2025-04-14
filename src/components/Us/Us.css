@@ -1,30 +1,33 @@
+
 .us-container {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 150px auto 0 auto;
+}
+
+.us-container.us-container-mobile {
+    margin: 90px auto 0 auto;
 }
 
 .us-container-header {
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 18px;
     font-weight: 600;
 }
 
-.us-container-quote {
-    width: 100%;
-    display: flex;
-    font-size: 36px;
-    flex-direction: column;
+.dot{
+    position: relative;
+    top: 4px;
+    height: 12px;
+    margin-right: 12px;
+}
+.us-container-header--desktop {
+    width: 30%;
 }
 
-.us-container-about {
-    margin-top: 1.5rem;
-    display: block;
-    margin-left: auto;
-    font-weight: 400;
-    width: 65%;
-    line-height: normal;
+.us-container-header--mobile {
+    width: 40%;
 }
 
 .us-container-body {
@@ -33,13 +36,109 @@
     gap: 3rem;
 }
 
-.us-container-mobile {
-    margin: 3rem 1rem;
+.us-container-body-mobile {
+    flex-direction: column;
+    gap: 24px;
 }
 
-.us-container-body-mobile {
+.us-container-quote {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    gap: 1rem;
+}
+
+.us-container-quote--desktop {
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.us-container-quote--mobile {
+    font-size: 26px;
+    position: relative;
+    font-weight: 500;
+    line-height: 34px;
+    word-wrap: break-word
+}
+
+.us-quote-start {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+.us-open-quotes-desktop {
+    padding-bottom: 12px;
+}
+
+.us-close-quotes-desktop {
+    max-width: 45px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.us-quote-text {
+    margin-left: 20px;
+    font-weight: 800;
+}
+
+.us-quote-text > span {
+    font-weight: 500;
+}
+
+.us-quote-end {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-top: -6px;
+}
+
+.us-quote-subtitle {
+    font-weight: 500;
+    text-align: right;
+    margin-right: 20px;
+
+}
+
+.us-open-quotes-mobile {
+    width: 32px;
+    height: 25px;
+    margin-bottom: 12px;
+}
+
+.us-quote-text-mobile {
+    font-weight: 800;
+    margin: 0;
+    line-height: 34px;
+}
+
+.us-quote-subtitle-mobile {
+    font-weight: 500;
+    text-align: right;
+}
+
+.us-close-quotes-mobile {
+    width: 32px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    bottom: -36px;
+}
+
+.us-container-about {
+    margin-top: 40px;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    word-wrap: break-word;
+    margin-left: 67px;
+    margin-right: 50px;
+    text-align: justify;
+
+}
+
+.us-container-about.us-container-about-mobile {
+    font-size: 18px;
+    margin: 61px 0 0 0;
+
 }

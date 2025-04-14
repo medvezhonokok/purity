@@ -2,28 +2,25 @@ import React from 'react';
 import './Form.css';
 import dot from "../../assets/whiteDot.svg";
 import {TextField} from "@mui/material";
-import { useForm, ValidationError } from '@formspree/react';
+import {useForm, ValidationError} from '@formspree/react';
+import useContentWidth from "../../hooks/useContentWidth";
 
 const Form = ({isMobile}) => {
     const [termsAccepted, setTermsAccepted] = React.useState(false);
     const [state, handleSubmit] = useForm("xgvapvwl");
+    const width = useContentWidth();
 
     return (
-        <div id='form' className={'form-container ' + (isMobile && 'form-container-mobile')}>
+        <div id='form' className={'form-container ' + (isMobile && 'form-container-mobile')} style={{width}}>
             <div className='us-container-header' style={!isMobile ? {color: "white", width: "30%"} : {color: "white", width: "50%", marginTop: '2rem'}}>
-                <img src={dot} alt={'us-dot'}/> Форма заявки
+                <img className={"dot"} src={dot} alt={'us-dot'}/>Форма&nbsp;заявки
             </div>
             <div className='form-container-body'>
                 <div className='form-header' style={isMobile && {fontSize: "32px"}}>
-                    Расскажите нам о <span style={{
-                    background: "white",
-                    color: "black",
-                    borderRadius: "1rem",
-                    padding: "3px"
-                }}>вашей идее</span> &mdash;
-                    <br/><span style={{
-                    color: "#1611E7"
-                }}>мы поможем</span> её реализовать!
+                    Расскажите нам о&nbsp;<span className={"ideas " + (isMobile ? "mobile" : "")}>вашей&nbsp;идее</span>&nbsp;&mdash;&nbsp;<br/>
+                    <span style={{
+                        color: "#1611E7"
+                    }}>мы поможем&nbsp;</span>её реализовать!
                 </div>
 
                 <form className='form-container-body-input' onSubmit={handleSubmit}>
@@ -45,12 +42,12 @@ const Form = ({isMobile}) => {
                         field="email"
                         errors={state.errors}
                     />
-                    <label>
+                    <label className="pers">
                         <input className='custom-checkbox'
                                onChange={() => setTermsAccepted(!termsAccepted)}
                                required={true}
-                               type={"checkbox"}/>Согласен с условиями обработки <a
-                        style={{color: "white"}} href={'#'}>персональных
+                               type={"checkbox"}/>Согласен с условиями обработки&nbsp;<a
+                        style={{color: "white"}} href={'policy'}>персональных
                         данных</a>
                     </label>
 

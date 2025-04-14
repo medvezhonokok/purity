@@ -5,6 +5,7 @@ import Us from "../components/Us/Us";
 import Specialization from "../components/Specialization/Specialization";
 import Cases from "../components/Cases/Cases";
 import Footer from "../components/Footer/Footer";
+import TypingComponent from "../components/TypingComponent/TypingComponent";
 
 const MobileLayout = ({showMenu}) => {
     return (
@@ -14,6 +15,7 @@ const MobileLayout = ({showMenu}) => {
         }}>
             <Menu show={showMenu} isMobile={true}/>
             <About isMobile={true}/>
+            <TypingComponent isMobile={true}/>
             <Us isMobile={true}/>
             <Specialization isMobile={true}/>
             <Cases isMobile={true}/>
